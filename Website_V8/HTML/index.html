@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/ea45cf90f9.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+
+    <!-- jquery?? -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Search...</title>
+</head>
+
+<body>
+
+    <!-- link to page 4: information -->
+    <button type="button" , onclick="location.href='info'" , class="info-button"><i
+            class="fa-solid fa-info fa-3x"></i></button>
+
+    <h1>Search up a political topic </h1>
+
+    <div class="rounded-borders, search-field-center">
+        <!-- Search field input, prefilled with "Search...", and a hidden button , dont remove <form>!!!!! needed for localStorage. -->
+        <form id="form">
+            <input type="text" id="text_input" class="form-control form-control-lg" placeholder="Type here...">
+            <button id="submit_button" hidden onclick="submit_search()">Enter</button>
+        </form>
+    </div>
+
+
+    <script>
+        // Accessing the user's input of the form, then saving it to localStorage using an eventlistener. This is necessary so that we can access the users data at a later point on this website. 
+        const form = document.getElementById("form");
+        const textInput = document.getElementById("text_input");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const textInputValue = textInput.value;
+
+            localStorage.setItem("users_search", textInputValue)
+        })
+
+        // JS script with Jquery that triggers a buttonpress when the user presses "Enter"
+        document.getElementById("text_input")
+            .addEventListener("keyup", function (event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.getElementById("submit_button").click();
+                }
+            });
+        // as soon as the hidden button is triggered, the next page "selection.html" is loaded
+        function submit_search() {
+            window.location.href = "selection";
+        }
+    </script>
+
+</body>
+
+</html>

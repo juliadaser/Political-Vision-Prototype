@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/ea45cf90f9.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="CSS/searchengines.css">
+
+    <title>Fox News</title>
+
+    <style type="text/css">
+        body {
+            background-color: #cc0100;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button type="button" , onclick="location.href='info'" , class="info-button"><i
+            class="fa-solid fa-info fa-3x"></i></button>
+
+    <!-- <button type="button" , onclick=goBack() , class="back-button"><i class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script> -->
+
+    <button type="button" class="back-button" onclick="location.href='/selection'"><i
+            class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+    <br>
+    <br>
+
+    <img src="IMAGES/FoxNews.png" alt="Fox News Logo" , class="center-image">
+
+    <h1>Fox News</h1>
+
+    <p>
+        On average, 410,562 copies of The Times circulated every workday, with the highest distribution in New York and
+        California.
+    </p>
+
+    <div class="red">
+        <ul>
+            <li><span style="color: #EBE3DB">94%</span> of The Fox News readers identify as <span
+                    style="color: #EBE3DB">Republicans</span>.
+            </li>
+            <li> <span style="color: #EBE3DB">35%</span> of the paper’s readers have a <span
+                    style="color: #EBE3DB">highschool degree </span>or less.</li>
+            <li>The average Fox News reader is <span style="color: #EBE3DB">68 years</span>.</li>
+            <li>More than <span style="color: #EBE3DB">94% </span> of Fox News audience are <span
+                    style="color: #EBE3DB">white</span>.</li>
+        </ul>
+    </div>
+
+    <script>
+        // the user's input from the search field is not always globally accessible with this code. 
+        const users_search = localStorage.getItem("users_search")
+        console.log("Our search:")
+        console.log(users_search)
+
+        // here we build the URL for google using the user's search request 
+        // DUCK DUCK GO SETUP OF URL: https://duckduckgo.com/?q=dog&ia=web
+        const foxnews_link = "https://www.foxnews.com/search-results/search?q=" + users_search;
+        console.log(foxnews_link)
+
+        // this function is triggered when the button is pressed
+        function open_foxnews() {
+            window.location = foxnews_link;
+        }
+    </script>
+
+    <button id="submit_button" class="search-engine" onclick="open_foxnews()">Search with FoxNews</button>
+    <button type="button" class="restart" onclick="location.href='/'">Restart</button>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/ea45cf90f9.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="CSS/searchengines.css">
+
+    <title>BBC</title>
+
+    <style type="text/css">
+        body {
+            background-color: #5d055e;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button type="button" , onclick="location.href='info'" , class="info-button"><i
+            class="fa-solid fa-info fa-3x"></i></button>
+
+    <!-- <button type="button" , onclick=goBack() , class="back-button"><i class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script> -->
+
+    <button type="button" class="back-button" onclick="location.href='/selection'"><i
+            class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+    <br>
+    <br>
+
+    <img src="IMAGES/BBC.png" alt="BBC Logo" class="center-image">
+
+    <h1>BBC </h1>
+
+    <p>
+        The BBC is the world's oldest national broadcaster, and it reaches an estimated weekly audience of 468 million
+        people globally, with the highest popularity in the
+        UK and the United States.
+    </p>
+
+    <div class="light-middle">
+        <ul>
+            <li>The BBC has a <span style="color: #EBE3DB">diverse audience</span> in terms of age and <br>
+                socio-economic background, although audience is
+                more likely <br>to come from <span style="color: #EBE3DB">lower socio-economic groups</span>.
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // the user's input from the search field is not always globally accessible with this code. 
+        const users_search = localStorage.getItem("users_search")
+        console.log("Our search:")
+        console.log(users_search)
+
+        // here we build the URL for google using the user's search request 
+        // YAHOO SETUP OF URL: https://search.yahoo.com/search?p=cat
+        const bbc_link = "https://www.bbc.co.uk/search?q=" + users_search;
+        console.log(bbc_link)
+
+        // this function is triggered when the button is pressed
+        function open_bbc() {
+            window.location = bbc_link;
+        }
+    </script>
+
+    <!-- <a href="https://search.yahoo.com/" class="btn btn-primary">Open Yahoo!</a> -->
+    <button id="submit_button" onclick="open_bbc()" class="search-engine">Search with BBC</button>
+    <button type="button" class="restart" onclick="location.href='/'">Restart</button>
+
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/ea45cf90f9.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="CSS/selection.css">
+
+    <title>Select News Channel</title>
+</head>
+
+<body>
+
+    <!-- <button type="button" , onclick=goBack() , class="back-button"><i class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script> -->
+
+    <button type="button" class="back-button" onclick="location.href='/'"><i
+            class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+
+    <button type="button" , onclick="location.href='info'" , class="info-button"><i
+            class="fa-solid fa-info fa-3x"></i></button>
+
+    <h1>Select Your News Channel</h1>
+
+    <div class="button-container">
+        <!-- BBC -->
+        <button type="button" , class="large_button" , onclick="location.href='bbc'">
+            <img src="IMAGES/BBC.png" alt="bbc button" class="button-images" border="0" />
+        </button>
+
+        <!-- New York Times -->
+        <button type="button" , class="large_button" , onclick="location.href='newyorktimes'"><img
+                src="IMAGES/New York Times.png" alt="newyorktimes button" class="button-images" border="0" />
+        </button>
+
+        <!-- Google News -->
+        <button type="button" , class="large_button" , onclick="location.href='googlenews'">
+            <img src="IMAGES/Google.png" alt="google button" class="button-images" border="0" />
+        </button>
+
+        <!-- Fox News -->
+        <button type="button" , class="large_button" , onclick="location.href='foxnews'">
+            <img src="IMAGES/FoxNews.png" alt="foxnews button" class="button-images" border="0" />
+        </button>
+
+        <!-- NewsWeek -->
+        <button type="button" , class="large_button" , onclick="location.href='newsweek'">
+            <img src="IMAGES/NewsWeek.png" alt="newsweek button" class="button-images" border="0" />
+        </button>
+
+        <!-- Wall Street Journal -->
+        <button type="button" , class="large_button" , onclick="location.href='wallstreetjournal'">
+            <img src="IMAGES/WallStreet.png" alt="wall street button" class="button-images" border="0" />
+        </button>
+
+
+    </div>
+
+</body>
+
+</html>

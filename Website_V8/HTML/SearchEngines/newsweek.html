@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/ea45cf90f9.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="CSS/searchengines.css">
+
+    <title>News Week</title>
+
+    <style type="text/css">
+        body {
+            background-color: #5d055e;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" , onclick="location.href='info'" , class="info-button"><i
+            class="fa-solid fa-info fa-3x"></i></button>
+
+    <!-- <button type="button" , onclick=goBack() , class="back-button"><i class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script> -->
+
+    <button type="button" class="back-button" onclick="location.href='/selection'"><i
+            class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+    <br>
+    <br>
+
+    <img src="IMAGES/NewsWeek.png" alt="NewsWeek Logo" , class="center-image">
+
+    <h1>News Week</h1>
+
+    <p>
+        Newsweek.com had an estimated 14.4 million monthly visits, with an average visit duration of 2 minutes and 20
+        seconds, and highest visit count from the United States and United Kingdom.
+    </p>
+
+    <div class="light-middle">
+        <ul>
+            <li><span style="color: #EBE3DB">65%</span> of Newsweek visitors are <span
+                    style="color: #EBE3DB">male</span> and <span style="color: #EBE3DB">35%</span> are <span
+                    style="color: #EBE3DB">female</span>.
+            </li>
+            <li>
+                Most Newsweek readers are <span style="color: #EBE3DB">aged between 18 and 44</span>, with 24% of
+                visitors being 18-24, <br>25% being 25-34, 20% being 35-44.
+            </li>
+            <li>
+                Newsweek has an approximately <span style="color: #EBE3DB">equal count</span> of readers identifying as
+                <span style="color: #EBE3DB">Democrats</span>
+                <br>or <span style="color: #EBE3DB">Republicans</span>, with
+                24% of all readers identifying as independents.
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // the user's input from the search field is not always globally accessible with this code. 
+        const users_search = localStorage.getItem("users_search")
+        console.log("Our search:")
+        console.log(users_search)
+
+        // here we build the URL for google using the user's search request 
+        // DUCK DUCK GO SETUP OF URL: https://duckduckgo.com/?q=dog&ia=web
+        const newsweek_link = "https://www.newsweek.com/search/site/?q=" + users_search;
+        console.log(newsweek_link)
+
+        // this function is triggered when the button is pressed
+        function open_newsweek() {
+            window.location = newsweek_link;
+        }
+    </script>
+
+    <button id="submit_button" class="search-engine" onclick="open_newsweek()">Search with NewsWeek</button>
+    <button type="button" class="restart" onclick="location.href='/'">Restart</button>
+
+</body>
+
+</html>
