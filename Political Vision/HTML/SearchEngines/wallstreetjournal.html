@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/ea45cf90f9.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="CSS/searchengines.css">
+
+    <title>The Wall Street Journal</title>
+
+    <style type="text/css">
+        body {
+            background-color: #90083d;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button type="button" , onclick="location.href='info'" , class="info-button"><i
+            class="fa-solid fa-info fa-3x"></i></button>
+
+    <!-- <button type="button" , onclick=goBack() , class="back-button"><i class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script> -->
+
+    <button type="button" class="back-button" onclick="location.href='/selection'"><i
+            class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+    <br>
+    <br>
+
+    <img src="IMAGES/WallStreet.png" alt="Wall Street Logo" class="center-image">
+
+    <h1>The Wall Street Journal</h1>
+
+    <p>
+        About 4% of U.S. adults read the Wall Street Journal in print or digital form.
+    </p>
+
+    <div class="mid-red">
+        <ul>
+            <li><span style="color: #EBE3DB">21%</span> of The Wall Street Journal readers identify as <span
+                    style="color: #EBE3DB">Democrats</span>.
+            </li>
+            <li> <span style="color: #EBE3DB">79%</span> of the paper’s readers have at least a <span
+                    style="color: #EBE3DB">university degree</span>.</li>
+            <li><span style="color: #EBE3DB">53%</span> of The Wall Street Journal readers are older than <span
+                    style="color: #EBE3DB">55</span>.
+            </li>
+            <li>The median <span style="color: #EBE3DB">household income</span> of The Wall Street Journal is more than
+                <span style="color: #EBE3DB">$147,700
+                </span>a year.</li>
+        </ul>
+    </div>
+
+    <script>
+        // the user's input from the search field is not always globally accessible with this code. 
+        const users_search = localStorage.getItem("users_search")
+        console.log("Our search:")
+        console.log(users_search)
+
+        // here we build the URL for google using the user's search request 
+        // YAHOO SETUP OF URL: https://search.yahoo.com/search?p=cat
+        const wallstreet_link = "https://www.wsj.com/search?query=" + users_search;
+        console.log(wallstreet_link)
+
+        // this function is triggered when the button is pressed
+        function open_wallstreet() {
+            window.location = wallstreet_link;
+        }
+    </script>
+
+    <!-- <a href="https://search.yahoo.com/" class="btn btn-primary">Open Yahoo!</a> -->
+    <button id="submit_button" onclick="open_wallstreet()" class="search-engine">Search with The Wallstreet
+        Journal</button>
+    <button type="button" class="restart" onclick="location.href='/'">Restart</button>
+
+
+</body>
+
+</html>

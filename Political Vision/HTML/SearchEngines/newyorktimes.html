@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/ea45cf90f9.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="CSS/searchengines.css">
+
+    <title>The New York Times</title>
+
+    <style type="text/css">
+        body {
+            background-color: #000099;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button type="button" , onclick="location.href='info'" , class="info-button"><i
+            class="fa-solid fa-info fa-3x"></i></button>
+
+    <!-- <button type="button" , onclick=goBack() , class="back-button"><i class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script> -->
+
+    <button type="button" class="back-button" onclick="location.href='/selection'"><i
+            class="fa-solid fa-arrow-left fa-3x"></i></button>
+
+    <br>
+    <br>
+
+    <img src="IMAGES/New York Times.png" alt="New York Times Logo" class="center-image">
+
+    <h1>The New York Times</h1>
+
+    <p>
+        On average, 410,562 copies of The Times circulated every workday, with the highest distribution in New York and
+        California.
+    </p>
+
+    <div class="light-blue">
+        <ul>
+            <li><span style="color: #EBE3DB">91%</span> of The New York Times readers identify as <span
+                    style="color: #EBE3DB">Democrats</span>.
+            </li>
+            <li> <span style="color: #EBE3DB">72%</span> of the paper’s readers have at least a <span
+                    style="color: #EBE3DB">university degree</span>.</li>
+            <li>The average Times reader is <span style="color: #EBE3DB">well-informed</span> and <span
+                    style="color: #EBE3DB">politically opinionated</span>.</li>
+            <li><span style="color: #EBE3DB">38%</span> of The New York Times’ readers earn more than <span
+                    style="color: #EBE3DB">$75,000 </span>a year.</li>
+            <li>More than <span style="color: #EBE3DB">two-thirds</span> of The Times’ readers are <span
+                    style="color: #EBE3DB">white</span>.</li>
+        </ul>
+    </div>
+
+    <script>
+        // the user's input from the search field is not always globally accessible with this code. 
+        const users_search = localStorage.getItem("users_search")
+        console.log("Our search:")
+        console.log(users_search)
+
+        // here we build the URL for google using the user's search request 
+        // YAHOO SETUP OF URL: https://search.yahoo.com/search?p=cat
+        const newyorktimes_link = "https://www.nytimes.com/search?query=" + users_search;
+        console.log(newyorktimes_link)
+
+        // this function is triggered when the button is pressed
+        function open_nyt() {
+            window.location = newyorktimes_link;
+        }
+    </script>
+
+    <!-- <a href="https://search.yahoo.com/" class="btn btn-primary">Open Yahoo!</a> -->
+    <button id="submit_button" onclick="open_nyt()" class="search-engine">Search with New York Times</button>
+    <button type="button" class="restart" onclick="location.href='/'">Restart</button>
+
+
+</body>
+
+</html>
